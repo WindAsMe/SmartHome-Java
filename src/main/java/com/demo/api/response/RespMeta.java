@@ -1,4 +1,4 @@
-package smarthome.demo.api.response;
+package com.demo.api.response;
 
 /**
  * Author     : WindAsMe

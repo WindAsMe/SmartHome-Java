@@ -21,6 +21,8 @@
     </environments>
 
     <mappers>
-
+        <mapper resource="mapper/HumidMapper.xml"/>
+        <mapper resource="mapper/PressureMapper.xml"/>
+        <mapper resource="mapper/TempMapper.xml"/>
     </mappers>
 </configuration>

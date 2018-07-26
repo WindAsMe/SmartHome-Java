@@ -1,4 +1,4 @@
-package smarthome.demo;
+package com.demo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
