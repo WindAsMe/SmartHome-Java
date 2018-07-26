@@ -34,7 +34,7 @@ public class TestResource {
 
     @GetMapping("/humid")
     public Response GetHumidData() {
-        System.out.println("humid");
+        // System.out.println("humid");
         HashMap<String, String> map = new HashMap<>();
         HumidModel model = this.humidService.getHumidDataLatest();
         if (model != null) {
@@ -49,7 +49,7 @@ public class TestResource {
 
     @GetMapping("/temp")
     public Response GetTempData() {
-        System.out.println("temp");
+        // System.out.println("temp");
         HashMap<String, String> map = new HashMap<>();
         TempModel model = this.tempService.getTempDataLatest();
         if (model != null) {
@@ -64,7 +64,7 @@ public class TestResource {
 
     @GetMapping("/press")
     public Response GetPressureData() {
-        System.out.println("pressure");
+        // System.out.println("pressure");
         HashMap<String, String> map = new HashMap<>();
         PressureModel model = this.pressureService.getPressureDataLatest();
         if (model != null) {
@@ -79,7 +79,7 @@ public class TestResource {
 
     @GetMapping("/all")
     public Response GetAllData (){
-        System.out.println("all");
+        // System.out.println("all");
         HashMap<String, String> map = new HashMap<>();
         HumidModel model1 = this.humidService.getHumidDataLatest();
         TempModel model2 = this.tempService.getTempDataLatest();
