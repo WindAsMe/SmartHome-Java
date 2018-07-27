@@ -31,4 +31,12 @@ public class TempModel {
     public void setTemp(float temp) {
         this.temp = temp;
     }
+
+    @Override
+    public String toString() {
+        return "TempModel{" +
+                "id=" + id +
+                ", temp=" + temp +
+                '}';
+    }
 }

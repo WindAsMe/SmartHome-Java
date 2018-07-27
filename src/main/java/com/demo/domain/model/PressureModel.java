@@ -31,4 +31,12 @@ public class PressureModel {
     public void setPressure(float pressure) {
         this.pressure = pressure;
     }
+
+    @Override
+    public String toString() {
+        return "PressureModel{" +
+                "id=" + id +
+                ", pressure=" + pressure +
+                '}';
+    }
 }

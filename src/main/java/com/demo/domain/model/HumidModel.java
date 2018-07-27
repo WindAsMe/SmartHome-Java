@@ -32,4 +32,11 @@ public class HumidModel {
         this.humid = humid;
     }
 
+    @Override
+    public String toString() {
+        return "HumidModel{" +
+                "id=" + id +
+                ", humid=" + humid +
+                '}';
+    }
 }
