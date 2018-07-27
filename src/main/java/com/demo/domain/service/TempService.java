@@ -10,7 +10,6 @@ import javax.annotation.Resource;
  * Author     : WindAsMe
  * File       : TempMapper.java
  * Time       : Create on 18-7-26
- * Location   : ../Home/JavaForLeeCode/TempMapper.java
  */
 @Service
 public class TempService {

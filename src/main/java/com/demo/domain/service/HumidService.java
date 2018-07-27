@@ -10,7 +10,6 @@ import javax.annotation.Resource;
  * Author     : WindAsMe
  * File       : humidService.java
  * Time       : Create on 18-7-26
- * Location   : ../Home/JavaForLeeCode/humidService.java
  */
 @Service
 public class HumidService {

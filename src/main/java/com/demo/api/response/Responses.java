@@ -5,7 +5,6 @@ import java.util.HashMap;
  * Author     : WindAsMe
  * File       : Responses.java
  * Time       : Create on 18-7-25
- * Location   : ../Home/JavaForLeeCode/Responses.java
  */
 public class Responses {
 

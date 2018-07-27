@@ -4,7 +4,6 @@ package com.demo.domain.model;
  * Author     : WindAsMe
  * File       : TempModel.java
  * Time       : Create on 18-7-26
- * Location   : ../Home/JavaForLeeCode/TempModel.java
  */
 public class TempModel {
 

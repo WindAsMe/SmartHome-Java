@@ -4,7 +4,6 @@ package com.demo.api.response;
  * Author     : WindAsMe
  * File       : Response.java
  * Time       : Create on 18-7-25
- * Location   : ../Home/JavaForLeeCode/Response.java
  */
 import java.util.HashMap;
 import java.util.Map;

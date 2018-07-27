@@ -23,7 +23,6 @@ import java.util.List;
  * Author     : WindAsMe
  * File       : TestResource.java
  * Time       : Create on 18-7-26
- * Location   : ../Home/JavaForLeeCode/TestResource.java
  */
 @RestController
 public class TestResource {

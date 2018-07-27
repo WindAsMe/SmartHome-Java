@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
  * Author     : WindAsMe
  * File       : HomeResource.java
  * Time       : Create on 18-7-27
- * Location   : ../Home/JavaForLeeCode/HomeResource.java
  */
 @RestController
 public class HomeResource {

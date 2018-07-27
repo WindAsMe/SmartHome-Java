@@ -4,7 +4,6 @@ package com.demo.api.response;
  * Author     : WindAsMe
  * File       : RespMeta.java
  * Time       : Create on 18-7-25
- * Location   : ../Home/JavaForLeeCode/RespMeta.java
  */
 public class RespMeta {
     private int code = -1;

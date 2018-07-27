@@ -7,7 +7,6 @@ import org.apache.ibatis.annotations.Mapper;
  * Author     : WindAsMe
  * File       : HumidMapper.java
  * Time       : Create on 18-7-26
- * Location   : ../Home/JavaForLeeCode/HumidMapper.java
  */
 @Mapper
 public interface HumidMapper {
