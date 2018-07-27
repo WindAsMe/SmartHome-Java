@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * Author     : WindAsMe
@@ -45,6 +46,7 @@ public class TestResource {
             logger.info("invoke GET /humid {}", model.toString());
             SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             String time = format.format(System.currentTimeMillis());
+            map.put("id", String.valueOf(model.getId()));
             map.put("humid", String.valueOf(model.getHumid()));
             map.put("time", time);
             return Responses.successResponse(map);
@@ -61,6 +63,7 @@ public class TestResource {
             logger.info("invoke GET /temp {}", model.toString());
             SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             String time = format.format(System.currentTimeMillis());
+            map.put("id", String.valueOf(model.getId()));
             map.put("temp", String.valueOf(model.getTemp()));
             map.put("time", time);
             return Responses.successResponse(map);
@@ -77,6 +80,7 @@ public class TestResource {
             logger.info("invoke GET /press {}", model.toString());
             SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             String time = format.format(System.currentTimeMillis());
+            map.put("id", String.valueOf(model.getId()));
             map.put("press", String.valueOf(model.getPressure()));
             map.put("time", time);
             return Responses.successResponse(map);
