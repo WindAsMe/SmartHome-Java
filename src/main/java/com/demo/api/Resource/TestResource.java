@@ -40,7 +40,7 @@ public class TestResource {
         if (model != null) {
             SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             String time = format.format(System.currentTimeMillis());
-            map.put("data", String.valueOf(model.getHumid()));
+            map.put("humid", String.valueOf(model.getHumid()));
             map.put("time", time);
             return Responses.successResponse(map);
         }
@@ -55,7 +55,7 @@ public class TestResource {
         if (model != null) {
             SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             String time = format.format(System.currentTimeMillis());
-            map.put("data", String.valueOf(model.getTemp()));
+            map.put("temp", String.valueOf(model.getTemp()));
             map.put("time", time);
             return Responses.successResponse(map);
         }
@@ -70,7 +70,7 @@ public class TestResource {
         if (model != null) {
             SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             String time = format.format(System.currentTimeMillis());
-            map.put("data", String.valueOf(model.getPressure()));
+            map.put("press", String.valueOf(model.getPressure()));
             map.put("time", time);
             return Responses.successResponse(map);
         }
@@ -85,9 +85,9 @@ public class TestResource {
         TempModel model2 = this.tempService.getTempDataLatest();
         PressureModel model3 = this.pressureService.getPressureDataLatest();
         if (model1 != null && model2 != null && model3 != null) {
-            map.put("data1", String.valueOf(model1.getHumid()));
-            map.put("data2", String.valueOf(model2.getTemp()));
-            map.put("data3", String.valueOf(model3.getPressure()));
+            map.put("humid", String.valueOf(model1.getHumid()));
+            map.put("temp", String.valueOf(model2.getTemp()));
+            map.put("press", String.valueOf(model3.getPressure()));
             map.put("time", String.valueOf(System.currentTimeMillis()));
             return Responses.successResponse(map);
         }
