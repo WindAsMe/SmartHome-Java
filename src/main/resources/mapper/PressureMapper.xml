@@ -6,6 +6,7 @@
     <resultMap id="PressureData" type="com.demo.domain.model.PressureModel">
         <result property="id" column="id"/>
         <result property="pressure" column="pressure"/>
+        <result property="time" column="time"/>
     </resultMap>
 
     <select id="getPressureDataLatest" resultMap="PressureData">

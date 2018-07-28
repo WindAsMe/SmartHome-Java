@@ -9,10 +9,12 @@ public class HumidModel {
 
     private int id;
     private Float humid;
+    private String time;
 
-    public HumidModel(int id, float humid) {
+    public HumidModel(int id, Float humid, String time) {
         this.id = id;
         this.humid = humid;
+        this.time = time;
     }
 
     public int getId() {
@@ -23,12 +25,20 @@ public class HumidModel {
         this.id = id;
     }
 
-    public float getHumid() {
+    public Float getHumid() {
         return humid;
     }
 
-    public void setHumid(float humid) {
+    public void setHumid(Float humid) {
         this.humid = humid;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 
     @Override
@@ -36,6 +46,7 @@ public class HumidModel {
         return "HumidModel{" +
                 "id=" + id +
                 ", humid=" + humid +
+                ", time='" + time + '\'' +
                 '}';
     }
 }

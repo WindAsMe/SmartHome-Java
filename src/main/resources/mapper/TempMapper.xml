@@ -6,6 +6,7 @@
     <resultMap id="TempData" type="com.demo.domain.model.TempModel">
         <result property="id" column="id"/>
         <result property="temp" column="temp"/>
+        <result property="time" column="time"/>
     </resultMap>
 
     <select id="getTempDataLatest" resultMap="TempData">

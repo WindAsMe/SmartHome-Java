@@ -9,10 +9,12 @@ public class TempModel {
 
     private int id;
     private Float temp;
+    private String time;
 
-    public TempModel(int id, float temp) {
+    public TempModel(int id, Float temp, String time) {
         this.id = id;
         this.temp = temp;
+        this.time = time;
     }
 
     public int getId() {
@@ -23,12 +25,20 @@ public class TempModel {
         this.id = id;
     }
 
-    public float getTemp() {
+    public Float getTemp() {
         return temp;
     }
 
-    public void setTemp(float temp) {
+    public void setTemp(Float temp) {
         this.temp = temp;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 
     @Override
@@ -36,6 +46,7 @@ public class TempModel {
         return "TempModel{" +
                 "id=" + id +
                 ", temp=" + temp +
+                ", time='" + time + '\'' +
                 '}';
     }
 }

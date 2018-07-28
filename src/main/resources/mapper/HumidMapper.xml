@@ -6,6 +6,7 @@
     <resultMap id="HumidData" type="com.demo.domain.model.HumidModel">
         <result property="id" column="id"/>
         <result property="humid" column="humid"/>
+        <result property="time" column="time"/>
     </resultMap>
 
     <select id="getHumidDataLatest" resultMap="HumidData">

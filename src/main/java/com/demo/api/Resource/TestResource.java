@@ -43,11 +43,9 @@ public class TestResource {
         HumidModel model = this.humidService.getHumidDataLatest();
         if (model != null) {
             logger.info("invoke GET /humid {}", model.toString());
-            SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-            String time = format.format(System.currentTimeMillis());
             map.put("id", String.valueOf(model.getId()));
             map.put("humid", String.valueOf(model.getHumid()));
-            map.put("time", time);
+            map.put("time", model.getTime());
             return Responses.successResponse(map);
         }
         return Responses.errorResponse("数据为空");
@@ -60,11 +58,9 @@ public class TestResource {
         TempModel model = this.tempService.getTempDataLatest();
         if (model != null) {
             logger.info("invoke GET /temp {}", model.toString());
-            SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-            String time = format.format(System.currentTimeMillis());
             map.put("id", String.valueOf(model.getId()));
             map.put("temp", String.valueOf(model.getTemp()));
-            map.put("time", time);
+            map.put("time", model.getTime());
             return Responses.successResponse(map);
         }
         return Responses.errorResponse("数据为空");
@@ -77,11 +73,9 @@ public class TestResource {
         PressureModel model = this.pressureService.getPressureDataLatest();
         if (model != null) {
             logger.info("invoke GET /press {}", model.toString());
-            SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-            String time = format.format(System.currentTimeMillis());
             map.put("id", String.valueOf(model.getId()));
             map.put("press", String.valueOf(model.getPressure()));
-            map.put("time", time);
+            map.put("time", model.getTime());
             return Responses.successResponse(map);
         }
         return Responses.errorResponse("数据为空");
@@ -102,7 +96,7 @@ public class TestResource {
             map.put("humid", String.valueOf(model1.getHumid()));
             map.put("temp", String.valueOf(model2.getTemp()));
             map.put("press", String.valueOf(model3.getPressure()));
-            map.put("time", String.valueOf(System.currentTimeMillis()));
+            map.put("time", model2.getTime());
             return Responses.successResponse(map);
         }
         return Responses.errorResponse("数据为空");

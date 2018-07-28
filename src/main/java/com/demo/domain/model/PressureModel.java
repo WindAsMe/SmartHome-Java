@@ -9,10 +9,12 @@ public class PressureModel {
 
     private int id;
     private Float pressure;
+    private String time;
 
-    public PressureModel(int id, float pressure) {
+    public PressureModel(int id, Float pressure, String time) {
         this.id = id;
         this.pressure = pressure;
+        this.time = time;
     }
 
     public int getId() {
@@ -23,12 +25,20 @@ public class PressureModel {
         this.id = id;
     }
 
-    public float getPressure() {
+    public Float getPressure() {
         return pressure;
     }
 
-    public void setPressure(float pressure) {
+    public void setPressure(Float pressure) {
         this.pressure = pressure;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 
     @Override
@@ -36,6 +46,7 @@ public class PressureModel {
         return "PressureModel{" +
                 "id=" + id +
                 ", pressure=" + pressure +
+                ", time='" + time + '\'' +
                 '}';
     }
 }
