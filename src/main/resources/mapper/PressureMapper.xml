@@ -3,6 +3,17 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.demo.infra.persistence.sql.mapper.PressureMapper">
 
+    <insert id="setPressureData">
+        INSERT INTO
+        pressure (
+        pressure,
+        time
+        ) VALUE (
+        #{pressure},
+        now()
+        )
+    </insert>
+
     <resultMap id="PressureData" type="com.demo.domain.model.PressureModel">
         <result property="id" column="id"/>
         <result property="pressure" column="pressure"/>

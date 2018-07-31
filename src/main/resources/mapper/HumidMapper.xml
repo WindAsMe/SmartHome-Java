@@ -3,6 +3,17 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.demo.infra.persistence.sql.mapper.HumidMapper">
 
+    <insert id="setHumidData">
+        INSERT INTO
+        humid (
+        humid,
+        time
+        ) VALUE (
+        #{humid},
+        now()
+        )
+    </insert>
+
     <resultMap id="HumidData" type="com.demo.domain.model.HumidModel">
         <result property="id" column="id"/>
         <result property="humid" column="humid"/>

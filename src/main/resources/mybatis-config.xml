@@ -15,7 +15,7 @@
                 <property name="driver" value="com.mysql.jdbc.Driver" />
                 <property name="url" value="jdbc:mysql://localhost" />
                 <property name="username" value="root" />
-                <property name="password" value="change123" />
+                <property name="password" value="root" />
             </dataSource>
         </environment>
     </environments>
@@ -24,5 +24,6 @@
         <mapper resource="mapper/HumidMapper.xml"/>
         <mapper resource="mapper/PressureMapper.xml"/>
         <mapper resource="mapper/TempMapper.xml"/>
+        <mapper resource="mapper/FlagMapper.xml"/>
     </mappers>
 </configuration>

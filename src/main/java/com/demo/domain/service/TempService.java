@@ -17,6 +17,10 @@ public class TempService {
     @Resource
     private TempMapper tempMapper;
 
+    public void setTempMapperData(Float temp) {
+        this.tempMapper.setTempMapperData(temp);
+    }
+
     public TempModel getTempDataLatest() {
         return this.tempMapper.getTempDataLatest();
     }

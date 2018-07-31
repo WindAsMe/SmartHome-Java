@@ -17,6 +17,10 @@ public class PressureService {
     @Resource
     private PressureMapper pressureMapper;
 
+    public void setPressureMapperData(Float pressure) {
+        this.pressureMapper.setPressureMapperData(pressure);
+    }
+
     public PressureModel getPressureDataLatest() {
         return this.pressureMapper.getPressureDataLatest();
     }

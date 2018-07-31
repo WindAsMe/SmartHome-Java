@@ -17,6 +17,10 @@ public class HumidService {
     @Resource
     private HumidMapper humidMapper;
 
+    public void setHumidData(Float humid) {
+        this.humidMapper.setHumidData(humid);
+    }
+
     public HumidModel getHumidDataLatest() {
         return this.humidMapper.getHumidDataLatest();
     }

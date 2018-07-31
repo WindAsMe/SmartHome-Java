@@ -12,12 +12,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
-import java.text.SimpleDateFormat;
 import java.util.HashMap;
-import java.util.List;
 
 /**
  * Author     : WindAsMe
@@ -35,6 +35,26 @@ public class TestResource {
     private TempService tempService;
 
     private final static Logger logger = LoggerFactory.getLogger(TestResource.class);
+
+    @PostMapping("/h")
+    public void PostHumidData(@RequestParam("humid") Float humid) {
+        System.out.println("humid" + humid);
+        logger.info("invoke h {} ", humid);
+        this.humidService.setHumidData(humid);
+    }
+
+    @PostMapping("/t")
+    public void PostTempData(@RequestParam("temp") Float temp) {
+        logger.info("invoke t {} ", temp);
+        this.tempService.setTempMapperData(temp);
+    }
+
+
+    @PostMapping("/p")
+    public void PostPressData(@RequestParam("press") Float press) {
+        logger.info("invoke p {} ", press);
+        this.pressureService.setPressureMapperData(press);
+    }
 
     @GetMapping("/humid")
     public Response GetHumidData() {

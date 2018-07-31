@@ -2,6 +2,7 @@ package com.demo.infra.persistence.sql.mapper;
 
 import com.demo.domain.model.HumidModel;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * Author     : WindAsMe
@@ -10,6 +11,8 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface HumidMapper {
+
+    void setHumidData(@Param("humid") Float humid);
 
     HumidModel getHumidDataLatest();
     int deleteHumidData();

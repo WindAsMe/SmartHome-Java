@@ -2,6 +2,7 @@ package com.demo.infra.persistence.sql.mapper;
 
 import com.demo.domain.model.PressureModel;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * Author     : WindAsMe
@@ -10,6 +11,8 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface PressureMapper {
+
+    void setPressureMapperData(@Param("pressure") Float pressure);
 
     PressureModel getPressureDataLatest();
     int deletePressureData();

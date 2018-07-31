@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.infra.persistence.sql.mapper.FlagMapper">
+
+    <insert id="setFlagData">
+        INSERT INTO
+        flag(
+        flag
+        ) VALUE (
+        #{flag}
+        )
+    </insert>
+
+    <resultMap id="FlagData" type="com.demo.domain.model.FlagModel">
+        <result property="id" column="id"/>
+        <result property="flag" column="flag"/>
+    </resultMap>
+
+    <select id="getFlagDataLatest" resultMap="FlagData">
+        SELECT
+        *
+        FROM
+        flag
+        ORDER BY id DESC limit 1
+    </select>
+
+
+</mapper>

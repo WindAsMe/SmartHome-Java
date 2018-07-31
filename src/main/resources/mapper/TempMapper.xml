@@ -3,6 +3,17 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.demo.infra.persistence.sql.mapper.TempMapper">
 
+    <insert id="setTempData">
+        INSERT INTO
+        temperature (
+        temp,
+        time
+        ) VALUE (
+        #{temp},
+        now()
+        )
+    </insert>
+
     <resultMap id="TempData" type="com.demo.domain.model.TempModel">
         <result property="id" column="id"/>
         <result property="temp" column="temp"/>
