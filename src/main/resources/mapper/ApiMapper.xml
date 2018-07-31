@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.infra.persistence.sql.mapper.ApiMapper">
+
+    <insert id="setApiData">
+        INSERT INTO
+        api(
+        flag,
+        is_read
+        ) VALUE (
+        #{flag},
+        #{isRead}
+        )
+    </insert>
+
+    <resultMap id="ApiData" type="com.demo.domain.model.ApiModel">
+        <result property="id" column="id"/>
+        <result property="flag" column="flag"/>
+        <result property="isRead" column="is_read"/>
+    </resultMap>
+
+    <select id="getApiDataLatest" resultMap="ApiData">
+        SELECT
+        *
+        FROM
+        api
+        ORDER BY id DESC limit 1
+    </select>
+
+    <update id="updateApiDataLatest" >
+        UPDATE api
+        set
+        flag = false ,
+        is_read = false
+        where
+        id = #{id}
+    </update>
+
+</mapper>

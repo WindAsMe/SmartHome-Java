@@ -25,5 +25,6 @@
         <mapper resource="mapper/PressureMapper.xml"/>
         <mapper resource="mapper/TempMapper.xml"/>
         <mapper resource="mapper/FlagMapper.xml"/>
+        <mapper resource="mapper/ApiMapper.xml"/>
     </mappers>
 </configuration>

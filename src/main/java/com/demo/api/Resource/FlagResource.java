@@ -2,13 +2,16 @@ package com.demo.api.Resource;
 
 import com.demo.api.response.Response;
 import com.demo.api.response.Responses;
+import com.demo.domain.model.ApiModel;
 import com.demo.domain.model.FlagModel;
+import com.demo.domain.service.ApiService;
 import com.demo.domain.service.FlagService;
 import com.demo.domain.util.HttpUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,6 +22,10 @@ public class FlagResource {
 
     @Resource
     private FlagService flagService;
+
+    @Resource
+    private ApiService apiService;
+
     private static int flag = -1;
     private final static Logger logger = LoggerFactory.getLogger(FlagResource.class);
 
@@ -49,6 +56,25 @@ public class FlagResource {
         }
         if (flag == 4) {
             HttpUtil.get(url + "4");
+        }
+    }
+
+
+    @PostMapping("/api/post")
+    public void ApiPost(@RequestParam("flag") Boolean flag){
+        if (flag)
+            this.apiService.setApiData(true, false);
+    }
+
+    // code == 0: Someone appeared
+    @GetMapping("/api/get")
+    public Response ApiGet() {
+        ApiModel model = this.apiService.getApiDataLatest();
+        if (model.isFlag() && model.isRead()) {
+            this.apiService.updateApiDataLatest(model.getId());
+            return Responses.successResponse();
+        } else {
+            return Responses.errorResponse("Error");
         }
     }
 }
